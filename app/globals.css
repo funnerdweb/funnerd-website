@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbfcfc;
+  --foreground: #1f1f1f;
+  --blue: #4064d7;
+}
+
+@utility container {
+  padding: 1rem;
+  margin-inline: auto;
+}
+
+@theme inline {
+  --color-white: var(--background);
+  --color-black: var(--foreground);
+  --color-blue: var(--blue);
+  --font-gelion: var(--font-gelion);
+  --font-humanist: var(--font-humanist);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
