@@ -18,6 +18,71 @@
             "label": "title",
             "placeholder": ""
           }
+        },
+        "features": {
+          "type": "Group",
+          "config": {
+            "label": "features",
+            "repeat": true,
+            "fields": {
+              "text": {
+                "type": "Text",
+                "config": {
+                  "label": "text",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "logo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "logo_one": {
+          "type": "Image",
+          "config": {
+            "label": "logo one",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "logo_two": {
+          "type": "Image",
+          "config": {
+            "label": "logo two",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "logo_three": {
+          "type": "Image",
+          "config": {
+            "label": "logo three",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "logos": {
+          "type": "Group",
+          "config": {
+            "label": "logos",
+            "repeat": true,
+            "fields": {
+              "logo": {
+                "type": "Image",
+                "config": {
+                  "label": "logo",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
         }
       },
       "items": {}

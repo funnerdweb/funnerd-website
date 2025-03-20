@@ -204,6 +204,36 @@ export type HeroSectionSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *HomeAboutSection → Default → Primary → features*
+ */
+export interface HomeAboutSectionSliceDefaultPrimaryFeaturesItem {
+  /**
+   * text field in *HomeAboutSection → Default → Primary → features*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_about_section.default.primary.features[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+}
+
+/**
+ * Item in *HomeAboutSection → Default → Primary → logos*
+ */
+export interface HomeAboutSectionSliceDefaultPrimaryLogosItem {
+  /**
+   * logo field in *HomeAboutSection → Default → Primary → logos*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_about_section.default.primary.logos[].logo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+}
+
+/**
  * Primary content in *HomeAboutSection → Default → Primary*
  */
 export interface HomeAboutSectionSliceDefaultPrimary {
@@ -216,6 +246,70 @@ export interface HomeAboutSectionSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
+
+  /**
+   * features field in *HomeAboutSection → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_about_section.default.primary.features[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  features: prismic.GroupField<
+    Simplify<HomeAboutSectionSliceDefaultPrimaryFeaturesItem>
+  >;
+
+  /**
+   * logo field in *HomeAboutSection → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_about_section.default.primary.logo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * logo one field in *HomeAboutSection → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_about_section.default.primary.logo_one
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo_one: prismic.ImageField<never>;
+
+  /**
+   * logo two field in *HomeAboutSection → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_about_section.default.primary.logo_two
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo_two: prismic.ImageField<never>;
+
+  /**
+   * logo three field in *HomeAboutSection → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_about_section.default.primary.logo_three
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo_three: prismic.ImageField<never>;
+
+  /**
+   * logos field in *HomeAboutSection → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_about_section.default.primary.logos[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  logos: prismic.GroupField<
+    Simplify<HomeAboutSectionSliceDefaultPrimaryLogosItem>
+  >;
 }
 
 /**
@@ -279,6 +373,8 @@ declare module "@prismicio/client" {
       HeroSectionSliceVariation,
       HeroSectionSliceDefault,
       HomeAboutSectionSlice,
+      HomeAboutSectionSliceDefaultPrimaryFeaturesItem,
+      HomeAboutSectionSliceDefaultPrimaryLogosItem,
       HomeAboutSectionSliceDefaultPrimary,
       HomeAboutSectionSliceVariation,
       HomeAboutSectionSliceDefault,
