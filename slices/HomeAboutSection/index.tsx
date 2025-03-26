@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/Button";
 import { Logo } from "@/components/Logo";
 import { Orbit } from "@/components/Orbit";
 import { staticBlurDataUrl } from "@/lib/staticBlurUrl";
@@ -38,13 +37,13 @@ const HomeAboutSection: FC<HomeAboutSectionProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="py-16"
     >
-      <div className="container ">
+      <div className="container">
         {/* text block */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold max-w-[32rem]">
               {slice.primary.title}
-            </h2>
+            </h1>
             <ul className="mt-12 flex flex-col gap-8">
               {slice.primary.features.map((item, index) => (
                 <li key={index} className="flex items-center gap-4">
@@ -54,13 +53,13 @@ const HomeAboutSection: FC<HomeAboutSectionProps> = ({ slice }) => {
               ))}
             </ul>
             <div className="mt-16">
-              <Button>Try it now</Button>
+              {/* <Button link={""}>Try it now</Button> */}
             </div>
           </div>
 
           {/* Wheel of logos */}
-          <div className="flex justify-center mt-16 flex-shrink-0">
-            <div className="size-[270px] md:size-[450px] relative flex flex-shrink-0">
+          <div className="flex justify-center flex-shrink-0">
+            <div className="size-[270px] md:size-[450px] relative flex flex-shrink-0 z-[2]">
               <div className="absolute inset-0">
                 <Orbit className="size-full border-[3px] border-black" />
               </div>

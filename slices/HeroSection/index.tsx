@@ -1,4 +1,3 @@
-import { Button } from "@/components/Button";
 import { staticBlurDataUrl } from "@/lib/staticBlurUrl";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
@@ -21,7 +20,7 @@ const HeroSection: FC<HeroSectionProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="pt-32 pb-16 bg-[radial-gradient(ellipse_100%_50%_at_bottom_left,#183EC2,#EAEEFE_66%)]"
+      className="lg:h-screen pt-32 pb-16 bg-[radial-gradient(ellipse_100%_50%_at_bottom_left,#183EC2,#EAEEFE_66%)]"
     >
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-8">
@@ -36,13 +35,13 @@ const HeroSection: FC<HeroSectionProps> = ({ slice }) => {
 
             {/* button */}
             <div className="w-[fit-content]">
-              <Button>{slice.primary.link_text}</Button>
+              {/* <Button link={}>{slice.primary.link_text}</Button> */}
             </div>
           </div>
 
           <div className="flex flex-col">
-            <div className="relative w-full h-full max-h-[600px] rounded-lg bg-blue bg-cover bg-center overflow-hidden">
-             {/* Image */}
+            <div className="relative w-full h-full max-h-[37.5rem] rounded-lg bg-blue bg-cover bg-center overflow-hidden">
+              {/* Image */}
               <PrismicNextImage
                 field={slice.primary.image1}
                 className="h-[inherit] w-full object-cover rounded-lg"
@@ -51,21 +50,23 @@ const HeroSection: FC<HeroSectionProps> = ({ slice }) => {
               />
               <div className="container">
                 <div className="absolute left-4 top-4">
-                  <p className="flex items-center space-x-2 py-1 px-3 backdrop-blur-md text-white bg-white/30 rounded-full">
-                    <span className="animate-pulse border border-white bg-green-500 w-4 h-4 rounded-full"></span>
+                  <div className="flex items-center space-x-2 py-1 px-3 backdrop-blur-md text-white bg-black/30 rounded-full">
+                    <div className="relative bg-green-500 size-4 rounded-full">
+                      <div className="bg-green-500 absolute inset-0 rounded-full animate-ping"></div>
+                    </div>
                     <span>04:59</span>
-                  </p>
+                  </div>
                 </div>
 
                 {/* Expand icon */}
                 <div className="absolute top-4 right-4">
-                  <div className="size-10 rounded-full backdrop-blur-md bg-white/30 px-2 flex items-center justify-center">
+                  <div className="size-10 rounded-full backdrop-blur-md bg-black/30 px-2 flex items-center justify-center">
                     <Expand className="text-white" />
                   </div>
                 </div>
 
                 <div className="absolute left-4 bottom-4 w-full">
-                  <div className="w-[90%] md:w-[95%] h-24 md:backdrop-blur-md bg-white/30 rounded-lg">
+                  <div className="w-[90%] md:w-[95%] h-24 md:backdrop-blur-md bg-black/30 rounded-lg">
                     <div className="flex flex-col gap-y-2 p-2">
                       <span className="text-white pb-1 px-3 bg-black w-[fit-content] rounded-full">
                         Attendees: 12
