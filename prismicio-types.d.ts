@@ -4,6 +4,78 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+type AboutDocumentDataSlicesSlice = FounderSectionSlice;
+
+/**
+ * Content for About documents
+ */
+interface AboutDocumentData {
+  /**
+   * Slice Zone field in *About*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<AboutDocumentDataSlicesSlice> /**
+   * Meta Title field in *About*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: about.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *About*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: about.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *About*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Keyword field in *About*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.keyword
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  keyword: prismic.KeyTextField;
+}
+
+/**
+ * About document from Prismic
+ *
+ * - **API ID**: `about`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AboutDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<AboutDocumentData>, "about", Lang>;
+
 type HomeDocumentDataSlicesSlice = HomeAboutSectionSlice | HeroSectionSlice;
 
 /**
@@ -141,7 +213,287 @@ export type ServicesDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HomeDocument | ServicesDocument;
+export type AllDocumentTypes = AboutDocument | HomeDocument | ServicesDocument;
+
+/**
+ * Item in *FounderSection → Default → Primary → socials*
+ */
+export interface FounderSectionSliceDefaultPrimarySocialsItem {
+  /**
+   * link field in *FounderSection → Default → Primary → socials*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.socials[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Item in *FounderSection → Default → Primary → experience one*
+ */
+export interface FounderSectionSliceDefaultPrimaryExperienceOneItem {
+  /**
+   * text field in *FounderSection → Default → Primary → experience one*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.experience_one[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+}
+
+/**
+ * Item in *FounderSection → Default → Primary → experience two*
+ */
+export interface FounderSectionSliceDefaultPrimaryExperienceTwoItem {
+  /**
+   * text field in *FounderSection → Default → Primary → experience two*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.experience_two[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+}
+
+/**
+ * Item in *FounderSection → Default → Primary → experience three*
+ */
+export interface FounderSectionSliceDefaultPrimaryExperienceThreeItem {
+  /**
+   * text field in *FounderSection → Default → Primary → experience three*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.experience_three[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+}
+
+/**
+ * Item in *FounderSection → Default → Primary → skills*
+ */
+export interface FounderSectionSliceDefaultPrimarySkillsItem {
+  /**
+   * text field in *FounderSection → Default → Primary → skills*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.skills[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *FounderSection → Default → Primary*
+ */
+export interface FounderSectionSliceDefaultPrimary {
+  /**
+   * section title field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.section_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  section_title: prismic.KeyTextField;
+
+  /**
+   * title field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * description field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * image field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * founder text field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.founder_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  founder_text: prismic.KeyTextField;
+
+  /**
+   * founder name field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.founder_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  founder_name: prismic.KeyTextField;
+
+  /**
+   * socials field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.socials[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  socials: prismic.GroupField<
+    Simplify<FounderSectionSliceDefaultPrimarySocialsItem>
+  >;
+
+  /**
+   * experience title field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.experience_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  experience_title: prismic.KeyTextField;
+
+  /**
+   * experience image field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.experience_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  experience_image: prismic.ImageField<never>;
+
+  /**
+   * experience title one field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.experience_title_one
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  experience_title_one: prismic.KeyTextField;
+
+  /**
+   * experience title two field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.experience_title_two
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  experience_title_two: prismic.KeyTextField;
+
+  /**
+   * experience title three field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.experience_title_three
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  experience_title_three: prismic.KeyTextField;
+
+  /**
+   * experience one field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.experience_one[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  experience_one: prismic.GroupField<
+    Simplify<FounderSectionSliceDefaultPrimaryExperienceOneItem>
+  >;
+
+  /**
+   * experience two field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.experience_two[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  experience_two: prismic.GroupField<
+    Simplify<FounderSectionSliceDefaultPrimaryExperienceTwoItem>
+  >;
+
+  /**
+   * experience three field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.experience_three[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  experience_three: prismic.GroupField<
+    Simplify<FounderSectionSliceDefaultPrimaryExperienceThreeItem>
+  >;
+
+  /**
+   * skills field in *FounderSection → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: founder_section.default.primary.skills[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  skills: prismic.GroupField<
+    Simplify<FounderSectionSliceDefaultPrimarySkillsItem>
+  >;
+}
+
+/**
+ * Default variation for FounderSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FounderSectionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FounderSectionSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *FounderSection*
+ */
+type FounderSectionSliceVariation = FounderSectionSliceDefault;
+
+/**
+ * FounderSection Shared Slice
+ *
+ * - **API ID**: `founder_section`
+ * - **Description**: FounderSection
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FounderSectionSlice = prismic.SharedSlice<
+  "founder_section",
+  FounderSectionSliceVariation
+>;
 
 /**
  * Item in *HeroSection → Default → Primary → items*
@@ -557,6 +909,9 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      AboutDocument,
+      AboutDocumentData,
+      AboutDocumentDataSlicesSlice,
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataSlicesSlice,
@@ -564,6 +919,15 @@ declare module "@prismicio/client" {
       ServicesDocumentData,
       ServicesDocumentDataSlicesSlice,
       AllDocumentTypes,
+      FounderSectionSlice,
+      FounderSectionSliceDefaultPrimarySocialsItem,
+      FounderSectionSliceDefaultPrimaryExperienceOneItem,
+      FounderSectionSliceDefaultPrimaryExperienceTwoItem,
+      FounderSectionSliceDefaultPrimaryExperienceThreeItem,
+      FounderSectionSliceDefaultPrimarySkillsItem,
+      FounderSectionSliceDefaultPrimary,
+      FounderSectionSliceVariation,
+      FounderSectionSliceDefault,
       HeroSectionSlice,
       HeroSectionSliceDefaultPrimaryItemsItem,
       HeroSectionSliceDefaultPrimary,

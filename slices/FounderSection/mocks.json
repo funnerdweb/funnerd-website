@@ -1,0 +1,193 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "at",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "FieldContent",
+				"value": "using",
+				"type": "Text"
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
+					"width": 4000,
+					"height": 6000
+				},
+				"url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
+				"width": 4000,
+				"height": 6000,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "eye",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"founder_text": {
+				"__TYPE__": "FieldContent",
+				"value": "mathematics",
+				"type": "Text"
+			},
+			"founder_name": {
+				"__TYPE__": "FieldContent",
+				"value": "back",
+				"type": "Text"
+			},
+			"socials": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"link",
+								{
+									"key": "e00bdbe1-35fd-4559-8378-1781f0bddbb8",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
+								}
+							]
+						]
+					}
+				]
+			},
+			"section_title": {
+				"__TYPE__": "FieldContent",
+				"value": "plenty",
+				"type": "Text"
+			},
+			"experience_title": {
+				"__TYPE__": "FieldContent",
+				"value": "summer",
+				"type": "Text"
+			},
+			"experience_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+					"width": 3168,
+					"height": 4752
+				},
+				"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+				"width": 3168,
+				"height": 4752,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "troops",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"experience_title_one": {
+				"__TYPE__": "FieldContent",
+				"value": "putting",
+				"type": "Text"
+			},
+			"experience_title_two": {
+				"__TYPE__": "FieldContent",
+				"value": "hot",
+				"type": "Text"
+			},
+			"experience_title_three": {
+				"__TYPE__": "FieldContent",
+				"value": "jungle",
+				"type": "Text"
+			},
+			"experience_one": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "center",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"experience_two": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "tax",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"experience_three": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "burn",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"skills": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "shade",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

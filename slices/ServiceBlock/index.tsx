@@ -25,7 +25,7 @@ const ServiceBlock: FC<ServiceBlockProps> = ({ slice }) => {
     >
       <div className="container lg:max-w-5xl">
         <div className="text-center">
-          <h2 className="text-4xl lg:text-[5rem] font-semibold">
+          <h2 className="text-4xl lg:text-[5rem] font-black">
             {slice.primary.title}
           </h2>
         </div>

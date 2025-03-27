@@ -9,17 +9,17 @@ const gelion = localFont({
   src: [
     {
       path: "../public/fonts/Gelion-Black.ttf",
-      weight: "900",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/Gelion-SemiBold.ttf",
       weight: "800",
       style: "normal",
     },
     {
       path: "../public/fonts/Gelion-Bold.ttf",
       weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Gelion-SemiBold.ttf",
+      weight: "600",
       style: "normal",
     },
     {
@@ -68,17 +68,6 @@ export default function RootLayout({
         <MenuProvider>
           <Navbar />
           <main className="flex-grow-[1]">{children}</main>
-          <Footer />
-          <Footer />
-          <Footer />
-          <Footer />
-          <Footer />
-          <Footer />
-          <Footer />
-          <Footer />
-          <Footer />
-          <Footer />
-          <Footer />
           <Footer />
         </MenuProvider>
       </body>
