@@ -11,6 +11,18 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "contact_card": {
+              "type": "SharedSlice"
+            },
+            "hero_block": {
+              "type": "SharedSlice"
+            },
+            "values_block": {
+              "type": "SharedSlice"
+            },
+            "about_funnerd_block": {
+              "type": "SharedSlice"
+            },
             "founder_section": {
               "type": "SharedSlice"
             }

@@ -1,0 +1,61 @@
+{
+  "id": "contact_card",
+  "type": "SharedSlice",
+  "name": "ContactCard",
+  "description": "ContactCard",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "images": {
+          "type": "Group",
+          "config": {
+            "label": "images",
+            "repeat": true,
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        },
+        "content": {
+          "type": "Text",
+          "config": {
+            "label": "content",
+            "placeholder": ""
+          }
+        },
+        "btn_text": {
+          "type": "Text",
+          "config": {
+            "label": "btn text",
+            "placeholder": ""
+          }
+        },
+        "btn_link": {
+          "type": "Link",
+          "config": {
+            "label": "btn link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": false,
+            "repeat": false
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

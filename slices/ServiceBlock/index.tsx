@@ -37,7 +37,7 @@ const ServiceBlock: FC<ServiceBlockProps> = ({ slice }) => {
               key={index}
               className="px-4 pt-8 pb-0 md:px-8 md:pt-12 lg:pt-16 lg:px-20 sticky"
               style={{
-                top: `calc(96px + ${index * 40}px)`,
+                top: `calc(96px + ${index * 0}px)`,
               }}
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">

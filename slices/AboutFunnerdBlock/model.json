@@ -1,0 +1,64 @@
+{
+  "id": "about_funnerd_block",
+  "type": "SharedSlice",
+  "name": "AboutFunnerdBlock",
+  "description": "AboutFunnerdBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "content": {
+          "type": "Text",
+          "config": {
+            "label": "content",
+            "placeholder": ""
+          }
+        },
+        "info": {
+          "type": "Group",
+          "config": {
+            "label": "info",
+            "repeat": true,
+            "fields": {
+              "text": {
+                "type": "Text",
+                "config": {
+                  "label": "text",
+                  "placeholder": ""
+                }
+              },
+              "subtext": {
+                "type": "Text",
+                "config": {
+                  "label": "subtext",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

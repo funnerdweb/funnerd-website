@@ -1,0 +1,53 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "nine",
+				"type": "Text"
+			},
+			"values": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "beautiful",
+									"type": "Text"
+								}
+							],
+							[
+								"content",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "quickly",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"btn_text": {
+				"__TYPE__": "FieldContent",
+				"value": "alone",
+				"type": "Text"
+			},
+			"btn_link": {
+				"__TYPE__": "LinkContent",
+				"key": "450fdfda-12cf-4ef8-9b63-6adc4ebd93b4",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			}
+		},
+		"items": []
+	}
+]

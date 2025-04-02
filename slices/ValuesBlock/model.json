@@ -1,0 +1,67 @@
+{
+  "id": "values_block",
+  "type": "SharedSlice",
+  "name": "ValuesBlock",
+  "description": "ValuesBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "btn_text": {
+          "type": "Text",
+          "config": {
+            "label": "btn text",
+            "placeholder": ""
+          }
+        },
+        "btn_link": {
+          "type": "Link",
+          "config": {
+            "label": "btn link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": false,
+            "repeat": false
+          }
+        },
+        "values": {
+          "type": "Group",
+          "config": {
+            "label": "values",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "title",
+                  "placeholder": ""
+                }
+              },
+              "content": {
+                "type": "Text",
+                "config": {
+                  "label": "content",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -3,8 +3,12 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  about_funnerd_block: dynamic(() => import("./AboutFunnerdBlock")),
+  contact_card: dynamic(() => import("./ContactCard")),
   founder_section: dynamic(() => import("./FounderSection")),
+  hero_block: dynamic(() => import("./HeroBlock")),
   hero_section: dynamic(() => import("./HeroSection")),
   home_about_section: dynamic(() => import("./HomeAboutSection")),
   service_block: dynamic(() => import("./ServiceBlock")),
+  values_block: dynamic(() => import("./ValuesBlock")),
 };

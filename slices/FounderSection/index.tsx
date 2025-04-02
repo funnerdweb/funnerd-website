@@ -28,11 +28,11 @@ const FounderSection: FC<FounderSectionProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="py-32"
+      className="py-16"
     >
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-6xl lg:text-[5rem] font-black max-w-[55rem] mx-auto">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black max-w-[45rem] mx-auto">
             {slice.primary.section_title}
           </h2>
         </div>
@@ -61,7 +61,7 @@ const FounderSection: FC<FounderSectionProps> = ({ slice }) => {
                 <SkillItems
                   data={slice.primary.skills}
                   className=""
-                  itemsWrapperClassName="animate-move-left [animation-duration:30s]"
+                  itemsWrapperClassName="animate-move-left [animation-duration:10s]"
                 />
                 <SkillItems
                   data={slice.primary.skills}
@@ -76,7 +76,7 @@ const FounderSection: FC<FounderSectionProps> = ({ slice }) => {
                 <SkillItems
                   data={slice.primary.skills}
                   className="mt-4"
-                  itemsWrapperClassName="animate-move-right [animation-duration:70s]"
+                  itemsWrapperClassName="animate-move-right [animation-duration:80s]"
                 />
               </div>
             </div>
