@@ -3,7 +3,6 @@ import { Button } from "@/components/Button";
 import { ValuesCard } from "@/components/ValuesCard";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import { Zap } from "lucide-react";
 import { FC } from "react";
 
 /**
