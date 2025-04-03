@@ -86,7 +86,6 @@
 							[
 								"image",
 								{
-									"__TYPE__": "ImageContent",
 									"origin": {
 										"id": "main",
 										"url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
@@ -105,7 +104,32 @@
 										"background": "transparent"
 									},
 									"alt": "driven",
+									"credits": null,
+									"__TYPE__": "ImageContent",
 									"thumbnails": {}
+								}
+							]
+						]
+					}
+				]
+			},
+			"brand_text": {
+				"__TYPE__": "FieldContent",
+				"value": "horn",
+				"type": "Text"
+			},
+			"exams": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "paragraph",
+									"type": "Text"
 								}
 							]
 						]

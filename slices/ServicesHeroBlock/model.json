@@ -1,0 +1,81 @@
+{
+  "id": "services_hero_block",
+  "type": "SharedSlice",
+  "name": "ServicesHeroBlock",
+  "description": "ServicesHeroBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "content": {
+          "type": "Text",
+          "config": {
+            "label": "content",
+            "placeholder": ""
+          }
+        },
+        "values": {
+          "type": "Group",
+          "config": {
+            "label": "values",
+            "repeat": true,
+            "fields": {
+              "text": {
+                "type": "Text",
+                "config": {
+                  "label": "text",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "image_one": {
+          "type": "Image",
+          "config": {
+            "label": "image one",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image_two": {
+          "type": "Image",
+          "config": {
+            "label": "image two",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image_three": {
+          "type": "Image",
+          "config": {
+            "label": "image three",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image_four": {
+          "type": "Image",
+          "config": {
+            "label": "image four",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

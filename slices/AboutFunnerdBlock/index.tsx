@@ -1,9 +1,8 @@
-import { FC } from "react";
-import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
 import { staticBlurDataUrl } from "@/lib/staticBlurUrl";
-import { Plus } from "lucide-react";
+import { Content } from "@prismicio/client";
+import { PrismicNextImage } from "@prismicio/next";
+import { SliceComponentProps } from "@prismicio/react";
+import { FC } from "react";
 
 /**
  * Props for `AboutFunnerdBlock`.
@@ -25,10 +24,10 @@ const AboutFunnerdBlock: FC<AboutFunnerdBlockProps> = ({ slice }) => {
     >
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-16">
-          <div className="">
+          <div className="aspect-square">
             <PrismicNextImage
               field={slice.primary.image}
-              className="rounded-lg size-full object-contain"
+              className="rounded-lg size-full object-cover"
               width={slice.primary.image.dimensions?.width}
               height={slice.primary.image.dimensions?.height}
               placeholder="blur"

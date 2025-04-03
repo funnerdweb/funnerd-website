@@ -83,6 +83,29 @@
               }
             }
           }
+        },
+        "brand_text": {
+          "type": "Text",
+          "config": {
+            "label": "brand text",
+            "placeholder": ""
+          }
+        },
+        "exams": {
+          "type": "Group",
+          "config": {
+            "label": "exams",
+            "repeat": true,
+            "fields": {
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "name",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
         }
       },
       "items": {}

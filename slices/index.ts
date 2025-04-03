@@ -10,5 +10,6 @@ export const components = {
   hero_section: dynamic(() => import("./HeroSection")),
   home_about_section: dynamic(() => import("./HomeAboutSection")),
   service_block: dynamic(() => import("./ServiceBlock")),
+  services_hero_block: dynamic(() => import("./ServicesHeroBlock")),
   values_block: dynamic(() => import("./ValuesBlock")),
 };

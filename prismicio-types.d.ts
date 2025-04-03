@@ -145,7 +145,10 @@ interface HomeDocumentData {
 export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
-type ServicesDocumentDataSlicesSlice = ContactCardSlice | ServiceBlockSlice;
+type ServicesDocumentDataSlicesSlice =
+  | ServicesHeroBlockSlice
+  | ContactCardSlice
+  | ServiceBlockSlice;
 
 /**
  * Content for Services documents
@@ -825,6 +828,21 @@ export interface HeroSectionSliceDefaultPrimaryItemsItem {
 }
 
 /**
+ * Item in *HeroSection → Default → Primary → exams*
+ */
+export interface HeroSectionSliceDefaultPrimaryExamsItem {
+  /**
+   * name field in *HeroSection → Default → Primary → exams*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_section.default.primary.exams[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+}
+
+/**
  * Primary content in *HeroSection → Default → Primary*
  */
 export interface HeroSectionSliceDefaultPrimary {
@@ -913,6 +931,26 @@ export interface HeroSectionSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   items: prismic.GroupField<Simplify<HeroSectionSliceDefaultPrimaryItemsItem>>;
+
+  /**
+   * brand text field in *HeroSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_section.default.primary.brand_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  brand_text: prismic.KeyTextField;
+
+  /**
+   * exams field in *HeroSection → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_section.default.primary.exams[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  exams: prismic.GroupField<Simplify<HeroSectionSliceDefaultPrimaryExamsItem>>;
 }
 
 /**
@@ -1203,6 +1241,128 @@ export type ServiceBlockSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *ServicesHeroBlock → Default → Primary → values*
+ */
+export interface ServicesHeroBlockSliceDefaultPrimaryValuesItem {
+  /**
+   * text field in *ServicesHeroBlock → Default → Primary → values*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_hero_block.default.primary.values[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  text: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *ServicesHeroBlock → Default → Primary*
+ */
+export interface ServicesHeroBlockSliceDefaultPrimary {
+  /**
+   * title field in *ServicesHeroBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_hero_block.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * content field in *ServicesHeroBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_hero_block.default.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+
+  /**
+   * values field in *ServicesHeroBlock → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_hero_block.default.primary.values[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  values: prismic.GroupField<
+    Simplify<ServicesHeroBlockSliceDefaultPrimaryValuesItem>
+  >;
+
+  /**
+   * image one field in *ServicesHeroBlock → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_hero_block.default.primary.image_one
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_one: prismic.ImageField<never>;
+
+  /**
+   * image two field in *ServicesHeroBlock → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_hero_block.default.primary.image_two
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_two: prismic.ImageField<never>;
+
+  /**
+   * image three field in *ServicesHeroBlock → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_hero_block.default.primary.image_three
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_three: prismic.ImageField<never>;
+
+  /**
+   * image four field in *ServicesHeroBlock → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_hero_block.default.primary.image_four
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_four: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for ServicesHeroBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ServicesHeroBlockSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ServicesHeroBlockSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ServicesHeroBlock*
+ */
+type ServicesHeroBlockSliceVariation = ServicesHeroBlockSliceDefault;
+
+/**
+ * ServicesHeroBlock Shared Slice
+ *
+ * - **API ID**: `services_hero_block`
+ * - **Description**: ServicesHeroBlock
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ServicesHeroBlockSlice = prismic.SharedSlice<
+  "services_hero_block",
+  ServicesHeroBlockSliceVariation
+>;
+
+/**
  * Item in *ValuesBlock → Default → Primary → values*
  */
 export interface ValuesBlockSliceDefaultPrimaryValuesItem {
@@ -1367,6 +1527,7 @@ declare module "@prismicio/client" {
       HeroBlockSliceDefault,
       HeroSectionSlice,
       HeroSectionSliceDefaultPrimaryItemsItem,
+      HeroSectionSliceDefaultPrimaryExamsItem,
       HeroSectionSliceDefaultPrimary,
       HeroSectionSliceVariation,
       HeroSectionSliceDefault,
@@ -1381,6 +1542,11 @@ declare module "@prismicio/client" {
       ServiceBlockSliceDefaultPrimary,
       ServiceBlockSliceVariation,
       ServiceBlockSliceDefault,
+      ServicesHeroBlockSlice,
+      ServicesHeroBlockSliceDefaultPrimaryValuesItem,
+      ServicesHeroBlockSliceDefaultPrimary,
+      ServicesHeroBlockSliceVariation,
+      ServicesHeroBlockSliceDefault,
       ValuesBlockSlice,
       ValuesBlockSliceDefaultPrimaryValuesItem,
       ValuesBlockSliceDefaultPrimary,

@@ -25,7 +25,7 @@ const HeroBlock: FC<HeroBlockProps> = ({ slice }) => {
       <div className="container">
         <div className="max-w-[32rem] mx-auto">
           <div className="flex flex-col items-center text-center space-y-8 md:space-y-8">
-            <h1 className="text-[2.625rem] lg:text-[5rem] leading-[1.25em] font-black">
+            <h1 className="text-[2.625rem] lg:text-[5rem] leading-[1em] font-black">
               {slice.primary.title}
             </h1>
 
@@ -33,7 +33,7 @@ const HeroBlock: FC<HeroBlockProps> = ({ slice }) => {
               {slice.primary.content}
             </p>
 
-            <Button link={slice.primary.btn_link}>
+            <Button variant="primary" link={slice.primary.btn_link}>
               {slice.primary.btn_text}
             </Button>
           </div>

@@ -26,7 +26,7 @@ const ValuesBlock: FC<ValuesBlockProps> = ({ slice }) => {
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-black max-w-[45rem] mx-auto">
               {slice.primary.title}
             </h2>
-            <Button link={slice.primary.btn_link}>
+            <Button variant="primary" link={slice.primary.btn_link}>
               {slice.primary.btn_text}
             </Button>
           </div>
