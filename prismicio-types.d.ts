@@ -470,6 +470,16 @@ export interface FaqsSliceDefaultPrimary {
   title: prismic.KeyTextField;
 
   /**
+   * description field in *Faqs → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faqs.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
    * faqs field in *Faqs → Default → Primary*
    *
    * - **Field Type**: Group

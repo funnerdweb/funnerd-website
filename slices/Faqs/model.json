@@ -19,6 +19,13 @@
             "placeholder": ""
           }
         },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "description",
+            "placeholder": ""
+          }
+        },
         "faqs": {
           "type": "Group",
           "config": {

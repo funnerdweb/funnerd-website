@@ -26,7 +26,7 @@ const TestimonialsBlock: FC<TestimonialsBlockProps> = ({ slice }) => {
           </h2>
         </div>
 
-        <div className="mt-8 flex overflow-x-clip py-4 -my-4 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className="mt-8 flex overflow-x-clip py-4 -my-4 [mask-image:linear-gradient(to_right,transparent,black_10%,black_100%,transparent)]">
           <div className="flex gap-8 flex-none animate-move-left [animation-duration:30s]">
             {[...new Array(2)].fill(0).map((_, index) => (
               <Fragment key={index}>
