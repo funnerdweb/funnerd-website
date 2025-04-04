@@ -65,7 +65,7 @@ const HomeAboutSection: FC<HomeAboutSectionProps> = ({ slice }) => {
           <div className="flex justify-center flex-shrink-0">
             <div className="size-[270px] md:size-[450px] relative flex flex-shrink-0 z-[2]">
               <div className="absolute inset-0">
-                <Orbit className="size-full border-[3px] border-black" />
+                <Orbit className="size-full border-[3px] border-black bg-accent" />
               </div>
               <div className="absolute-center">
                 <Orbit className="size-[180px] md:size-[300px]" />

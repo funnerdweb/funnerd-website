@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { HTMLAttributes } from "react";
-import logoImage from "../public/assets/Logo.jpg";
+import logoImage from "../public/assets/funnerd-logo.png";
 import Image from "next/image";
 
 type LogoProps = {
@@ -13,10 +13,10 @@ export const Logo = ({ className, style }: LogoProps) => {
     <div className={clsx("relative size-10", className)} style={style}>
       <Image
         src={logoImage}
-        alt="Logo"
+        alt="funnerd-logo"
         style={{
-          maskImage: `url(${logoImage.src})`,
-          WebkitMaskImage: `url(${logoImage.src})`,
+          // maskImage: `url(${logoImage.src})`,
+          // WebkitMaskImage: `url(${logoImage.src})`,
         }}
       />
     </div>

@@ -1233,36 +1233,6 @@ export interface HomeAboutSectionSliceDefaultPrimary {
   logo: prismic.ImageField<never>;
 
   /**
-   * logo one field in *HomeAboutSection → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home_about_section.default.primary.logo_one
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  logo_one: prismic.ImageField<never>;
-
-  /**
-   * logo two field in *HomeAboutSection → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home_about_section.default.primary.logo_two
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  logo_two: prismic.ImageField<never>;
-
-  /**
-   * logo three field in *HomeAboutSection → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home_about_section.default.primary.logo_three
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  logo_three: prismic.ImageField<never>;
-
-  /**
    * logos field in *HomeAboutSection → Default → Primary*
    *
    * - **Field Type**: Group

@@ -43,30 +43,6 @@
             "thumbnails": []
           }
         },
-        "logo_one": {
-          "type": "Image",
-          "config": {
-            "label": "logo one",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "logo_two": {
-          "type": "Image",
-          "config": {
-            "label": "logo two",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "logo_three": {
-          "type": "Image",
-          "config": {
-            "label": "logo three",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
         "logos": {
           "type": "Group",
           "config": {

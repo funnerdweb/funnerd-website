@@ -2,8 +2,10 @@
 
 import { Menu, X } from "lucide-react";
 import { AnimatePresence } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import logoImage from "../../public/assets/funnerd-logo.png";
 import { useMenu } from "./MenuContext";
 import { MobileNavMenu } from "./MobileMenu";
 
@@ -34,14 +36,13 @@ export const Navbar = () => {
               href="/"
               className="flex flex-row space-x-4 items-center text-[1rem] md:text-2xl font-bold hover:opacity-90 transition-opacity"
             >
-              {/* <Image
-              src="/images/msf-logo.png"
-              alt="Msf-logo"
-              width={50}
-              height={50}
+              <Image
+              src={logoImage}
+              alt="funnerd-logo"
+              width={70}
+              height={70}
               priority
-            /> */}
-              <span className="font-humanist">Funnerd Tutors</span>
+            />
             </Link>
 
             {/* Toggle Menu */}
