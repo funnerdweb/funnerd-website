@@ -14,10 +14,10 @@ export const Logo = ({ className, style }: LogoProps) => {
       <Image
         src={logoImage}
         alt="funnerd-logo"
-        style={{
-          // maskImage: `url(${logoImage.src})`,
-          // WebkitMaskImage: `url(${logoImage.src})`,
-        }}
+        // style={{
+        //   maskImage: `url(${logoImage.src})`,
+        //   WebkitMaskImage: `url(${logoImage.src})`,
+        // }}
       />
     </div>
   );

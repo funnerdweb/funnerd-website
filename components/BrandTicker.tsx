@@ -13,7 +13,7 @@ type IBrandTickerProps = {
 export function BrandTicker({ text, data }: IBrandTickerProps) {
   return (
     <div className="overflow-x-clip pt-16">
-      <h3 className="text-xl font-medium text-center text-black/50">{text}</h3>
+      <h3 className="text-xl font-medium font-humanist text-center text-black/50">{text}</h3>
 
       <div className="flex overflow-hidden mt-8 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
         <motion.div

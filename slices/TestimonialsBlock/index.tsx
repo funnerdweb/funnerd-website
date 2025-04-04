@@ -40,7 +40,7 @@ const TestimonialsBlock: FC<TestimonialsBlockProps> = ({ slice }) => {
                       {item.content}
                     </p>
                     <div className="mt-4">
-                      <h3 className="text-3xl font-black gradient">
+                      <h3 className="text-3xl font-humanist font-black gradient">
                         {item.name}
                       </h3>
                       <p className="text-xl -tracking-[0.2px] font-medium text-black/50">

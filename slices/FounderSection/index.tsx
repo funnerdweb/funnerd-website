@@ -22,6 +22,7 @@ const FounderSection: FC<FounderSectionProps> = ({ slice }) => {
     [0, Icons.Instagram],
     [1, Icons.LinkedIn],
     [2, Icons.Facebook],
+    [3, Icons.YouTube],
   ]);
 
   return (
