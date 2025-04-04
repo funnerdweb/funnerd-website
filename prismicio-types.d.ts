@@ -82,6 +82,8 @@ export type AboutDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<AboutDocumentData>, "about", Lang>;
 
 type HomeDocumentDataSlicesSlice =
+  | HomeFounderBlockSlice
+  | FeaturesBlockSlice
   | ContactCardSlice
   | HomeAboutSectionSlice
   | HeroSectionSlice;
@@ -424,6 +426,98 @@ type ContactCardSliceVariation = ContactCardSliceDefault;
 export type ContactCardSlice = prismic.SharedSlice<
   "contact_card",
   ContactCardSliceVariation
+>;
+
+/**
+ * Item in *FeaturesBlock → Default → Primary → features*
+ */
+export interface FeaturesBlockSliceDefaultPrimaryFeaturesItem {
+  /**
+   * image field in *FeaturesBlock → Default → Primary → features*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features_block.default.primary.features[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * title field in *FeaturesBlock → Default → Primary → features*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features_block.default.primary.features[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * content field in *FeaturesBlock → Default → Primary → features*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features_block.default.primary.features[].content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *FeaturesBlock → Default → Primary*
+ */
+export interface FeaturesBlockSliceDefaultPrimary {
+  /**
+   * title field in *FeaturesBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features_block.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * features field in *FeaturesBlock → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features_block.default.primary.features[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  features: prismic.GroupField<
+    Simplify<FeaturesBlockSliceDefaultPrimaryFeaturesItem>
+  >;
+}
+
+/**
+ * Default variation for FeaturesBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FeaturesBlockSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FeaturesBlockSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *FeaturesBlock*
+ */
+type FeaturesBlockSliceVariation = FeaturesBlockSliceDefault;
+
+/**
+ * FeaturesBlock Shared Slice
+ *
+ * - **API ID**: `features_block`
+ * - **Description**: FeaturesBlock
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FeaturesBlockSlice = prismic.SharedSlice<
+  "features_block",
+  FeaturesBlockSliceVariation
 >;
 
 /**
@@ -1123,6 +1217,97 @@ export type HomeAboutSectionSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *HomeFounderBlock → Default → Primary*
+ */
+export interface HomeFounderBlockSliceDefaultPrimary {
+  /**
+   * image field in *HomeFounderBlock → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_founder_block.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * title field in *HomeFounderBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_founder_block.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * content field in *HomeFounderBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_founder_block.default.primary.content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+
+  /**
+   * btn link field in *HomeFounderBlock → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_founder_block.default.primary.btn_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  btn_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * btn text field in *HomeFounderBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_founder_block.default.primary.btn_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  btn_text: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for HomeFounderBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HomeFounderBlockSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HomeFounderBlockSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *HomeFounderBlock*
+ */
+type HomeFounderBlockSliceVariation = HomeFounderBlockSliceDefault;
+
+/**
+ * HomeFounderBlock Shared Slice
+ *
+ * - **API ID**: `home_founder_block`
+ * - **Description**: HomeFounderBlock
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HomeFounderBlockSlice = prismic.SharedSlice<
+  "home_founder_block",
+  HomeFounderBlockSliceVariation
+>;
+
+/**
  * Item in *ServiceBlock → Default → Primary → services*
  */
 export interface ServiceBlockSliceDefaultPrimaryServicesItem {
@@ -1241,21 +1426,6 @@ export type ServiceBlockSlice = prismic.SharedSlice<
 >;
 
 /**
- * Item in *ServicesHeroBlock → Default → Primary → values*
- */
-export interface ServicesHeroBlockSliceDefaultPrimaryValuesItem {
-  /**
-   * text field in *ServicesHeroBlock → Default → Primary → values*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: services_hero_block.default.primary.values[].text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  text: prismic.KeyTextField;
-}
-
-/**
  * Primary content in *ServicesHeroBlock → Default → Primary*
  */
 export interface ServicesHeroBlockSliceDefaultPrimary {
@@ -1278,18 +1448,6 @@ export interface ServicesHeroBlockSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   content: prismic.KeyTextField;
-
-  /**
-   * values field in *ServicesHeroBlock → Default → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: services_hero_block.default.primary.values[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  values: prismic.GroupField<
-    Simplify<ServicesHeroBlockSliceDefaultPrimaryValuesItem>
-  >;
 
   /**
    * image one field in *ServicesHeroBlock → Default → Primary*
@@ -1330,6 +1488,32 @@ export interface ServicesHeroBlockSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image_four: prismic.ImageField<never>;
+
+  /**
+   * btn text field in *ServicesHeroBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_hero_block.default.primary.btn_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  btn_text: prismic.KeyTextField;
+
+  /**
+   * btn link field in *ServicesHeroBlock → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_hero_block.default.primary.btn_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  btn_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 }
 
 /**
@@ -1511,6 +1695,11 @@ declare module "@prismicio/client" {
       ContactCardSliceDefaultPrimary,
       ContactCardSliceVariation,
       ContactCardSliceDefault,
+      FeaturesBlockSlice,
+      FeaturesBlockSliceDefaultPrimaryFeaturesItem,
+      FeaturesBlockSliceDefaultPrimary,
+      FeaturesBlockSliceVariation,
+      FeaturesBlockSliceDefault,
       FounderSectionSlice,
       FounderSectionSliceDefaultPrimarySocialsItem,
       FounderSectionSliceDefaultPrimaryExperienceOneItem,
@@ -1537,13 +1726,16 @@ declare module "@prismicio/client" {
       HomeAboutSectionSliceDefaultPrimary,
       HomeAboutSectionSliceVariation,
       HomeAboutSectionSliceDefault,
+      HomeFounderBlockSlice,
+      HomeFounderBlockSliceDefaultPrimary,
+      HomeFounderBlockSliceVariation,
+      HomeFounderBlockSliceDefault,
       ServiceBlockSlice,
       ServiceBlockSliceDefaultPrimaryServicesItem,
       ServiceBlockSliceDefaultPrimary,
       ServiceBlockSliceVariation,
       ServiceBlockSliceDefault,
       ServicesHeroBlockSlice,
-      ServicesHeroBlockSliceDefaultPrimaryValuesItem,
       ServicesHeroBlockSliceDefaultPrimary,
       ServicesHeroBlockSliceVariation,
       ServicesHeroBlockSliceDefault,

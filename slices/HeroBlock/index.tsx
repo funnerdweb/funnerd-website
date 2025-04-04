@@ -15,6 +15,7 @@ export type HeroBlockProps = SliceComponentProps<Content.HeroBlockSlice>;
  */
 const HeroBlock: FC<HeroBlockProps> = ({ slice }) => {
     const getBlurSvg = staticBlurDataUrl();
+     
   
   return (
     <section
@@ -23,7 +24,7 @@ const HeroBlock: FC<HeroBlockProps> = ({ slice }) => {
       className="pt-32 pb-8 md:pb-16 bg-[radial-gradient(ellipse_100%_50%_at_bottom_left,#183EC2,#EAEEFE_66%)]"
     >
       <div className="container">
-        <div className="max-w-[32rem] mx-auto">
+        <div className="max-w-[40rem] mx-auto">
           <div className="flex flex-col items-center text-center space-y-8 md:space-y-8">
             <h1 className="text-[2.625rem] lg:text-[5rem] leading-[1em] font-black">
               {slice.primary.title}
@@ -39,6 +40,7 @@ const HeroBlock: FC<HeroBlockProps> = ({ slice }) => {
           </div>
         </div>
       </div>
+      {/* Images */}
       <div className="grid grid-cols-2 md:grid-cols-4 px-4 md:px-0 justify-center items-center gap-4 lg:gap-8 py-16">
         {slice.primary.images.map((item, index) => (
           <div className="aspect-square md:aspect-auto" key={index}>

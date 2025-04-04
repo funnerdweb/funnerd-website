@@ -3,6 +3,7 @@ import { staticBlurDataUrl } from "@/lib/staticBlurUrl";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { SliceComponentProps } from "@prismicio/react";
+// import { Expand } from "lucide-react";
 import { FC } from "react";
 
 /**
@@ -61,6 +62,8 @@ const HeroSection: FC<HeroSectionProps> = ({ slice }) => {
                     <span>04:59</span>
                   </div>
                 </div>
+
+              
 
                 <div className="absolute left-4 bottom-4 w-full">
                   <div className="w-[90%] md:w-[95%] h-24 md:backdrop-blur-md bg-black/30 rounded-lg">

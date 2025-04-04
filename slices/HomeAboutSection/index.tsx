@@ -37,18 +37,22 @@ const HomeAboutSection: FC<HomeAboutSectionProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="py-16"
     >
-      <div className="container">
+      <div className="container overflow-hidden">
+        <div className="max-w-[40rem]">
+          <h2 className="text-4xl lg:text-[5rem] font-black">
+            {slice.primary.title}
+          </h2>
+        </div>
         {/* text block */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold max-w-[32rem]">
-              {slice.primary.title}
-            </h1>
             <ul className="mt-12 flex flex-col gap-8">
               {slice.primary.features.map((item, index) => (
                 <li key={index} className="flex items-center gap-4">
                   <CircleCheck className="size-6 bg-blue text-white rounded-full" />
-                  <span className="text-xl font-medium">{item.text}</span>
+                  <span className="text-lg md:text-xl font-medium -tracking-[0.2px]">
+                    {item.text}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -97,12 +101,9 @@ const HomeAboutSection: FC<HomeAboutSectionProps> = ({ slice }) => {
                       repeat: Infinity,
                       duration: 10,
                     }}
-                    // style={{
-                    //   transform: `rotate(${rotate}deg)`,
-                    // }}
                   >
                     <motion.div
-                      className="inline-flex size-10 md:size-14 items-center border border-black bg-black rounded-full justify-center absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-0"
+                      className="inline-flex size-10 md:size-12 items-center border border-black bg-black rounded-full justify-center absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-0"
                       initial={{
                         translate: "-50%, -50%",
                         rotate: -rotate,

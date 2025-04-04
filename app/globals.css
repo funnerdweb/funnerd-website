@@ -20,6 +20,10 @@
   margin-inline: auto;
 }
 
+@utility shadow-lg {
+  box-shadow: 0 4px 14px #3535640d;
+}
+
 @theme inline {
   --color-white: var(--background);
   --color-black: var(--foreground);

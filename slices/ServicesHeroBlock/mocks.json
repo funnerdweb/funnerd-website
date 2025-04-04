@@ -13,24 +13,6 @@
 				"value": "zebra",
 				"type": "Text"
 			},
-			"values": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"text",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "directly",
-									"type": "Text"
-								}
-							]
-						]
-					}
-				]
-			},
 			"image_one": {
 				"origin": {
 					"id": "main",
@@ -101,7 +83,6 @@
 				"thumbnails": {}
 			},
 			"image_four": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
@@ -120,7 +101,22 @@
 					"background": "transparent"
 				},
 				"alt": "tobacco",
+				"credits": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"btn_text": {
+				"__TYPE__": "FieldContent",
+				"value": "tip",
+				"type": "Text"
+			},
+			"btn_link": {
+				"key": "f04fdead-a501-4682-babc-9b245605b622",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
 			}
 		},
 		"items": []

@@ -1,7 +1,7 @@
 "use client";
 import { Simplify, ValuesBlockSliceDefaultPrimaryValuesItem } from "@/prismicio-types";
 import clsx from "clsx";
-import { Zap } from "lucide-react";
+import { Award } from "lucide-react";
 import { motion } from "motion/react";
 import { Fragment } from "react";
 
@@ -13,12 +13,12 @@ type ValuesCardProps = {
 
 export function ValuesCard({ data, className, reverse }: ValuesCardProps) {
   const iconsArray = new Map([
-    [0, Zap],
-    [1, Zap],
-    [2, Zap],
-    [3, Zap],
-    [4, Zap],
-    [5, Zap],
+    [0, Award],
+    [1, Award],
+    [2, Award],
+    [3, Award],
+    [4, Award],
+    [5, Award],
   ]);
 
   return (

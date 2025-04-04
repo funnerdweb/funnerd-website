@@ -5,10 +5,12 @@ import dynamic from "next/dynamic";
 export const components = {
   about_funnerd_block: dynamic(() => import("./AboutFunnerdBlock")),
   contact_card: dynamic(() => import("./ContactCard")),
+  features_block: dynamic(() => import("./FeaturesBlock")),
   founder_section: dynamic(() => import("./FounderSection")),
   hero_block: dynamic(() => import("./HeroBlock")),
   hero_section: dynamic(() => import("./HeroSection")),
   home_about_section: dynamic(() => import("./HomeAboutSection")),
+  home_founder_block: dynamic(() => import("./HomeFounderBlock")),
   service_block: dynamic(() => import("./ServiceBlock")),
   services_hero_block: dynamic(() => import("./ServicesHeroBlock")),
   values_block: dynamic(() => import("./ValuesBlock")),

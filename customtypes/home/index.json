@@ -11,6 +11,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "home_founder_block": {
+              "type": "SharedSlice"
+            },
+            "features_block": {
+              "type": "SharedSlice"
+            },
             "contact_card": {
               "type": "SharedSlice"
             },

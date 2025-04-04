@@ -6,7 +6,7 @@ interface ButtonProps {
   children: KeyTextField;
   link: LinkField | null | undefined;
   variant?: "primary" | "secondary";
-  className?: "string";
+  className?: string;
 }
 
 const classes = cva(
@@ -15,7 +15,7 @@ const classes = cva(
     variants: {
       variant: {
         primary: "bg-blue hover:bg-black",
-        secondary: "bg-black hover:bg-accent",
+        secondary: "bg-black hover:bg-green-500",
       },
     },
   }

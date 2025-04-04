@@ -50,7 +50,7 @@ const ServiceBlock: FC<ServiceBlockProps> = ({ slice }) => {
                   </p>
 
                   <div className="w-full mt-4">
-                    <Button link={item.button_link}>{item.button_text}</Button>
+                    <Button variant="primary" link={item.button_link}>{item.button_text}</Button>
                   </div>
                 </div>
                 <div className="relative">

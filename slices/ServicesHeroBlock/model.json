@@ -26,22 +26,6 @@
             "placeholder": ""
           }
         },
-        "values": {
-          "type": "Group",
-          "config": {
-            "label": "values",
-            "repeat": true,
-            "fields": {
-              "text": {
-                "type": "Text",
-                "config": {
-                  "label": "text",
-                  "placeholder": ""
-                }
-              }
-            }
-          }
-        },
         "image_one": {
           "type": "Image",
           "config": {
@@ -72,6 +56,24 @@
             "label": "image four",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "btn_text": {
+          "type": "Text",
+          "config": {
+            "label": "btn text",
+            "placeholder": ""
+          }
+        },
+        "btn_link": {
+          "type": "Link",
+          "config": {
+            "label": "btn link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": false,
+            "repeat": false
           }
         }
       },
