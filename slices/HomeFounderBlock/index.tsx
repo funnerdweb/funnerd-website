@@ -35,11 +35,11 @@ const HomeFounderBlock: FC<HomeFounderBlockProps> = ({ slice }) => {
               blurDataURL={getBlurSvg}
             />
           </div>
-          <div className="flex flex-col justify-center gap-y-4 md:gap-y-8 max-w-[32rem] mx-auto">
+          <div className="flex flex-col justify-center gap-y-4 md:gap-y-8 max-w-[40rem] mx-auto">
             <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black">
               {slice.primary.title}
             </h2>
-            <p className="text-[1.125rem] md:text-lg lg:text-2xl">
+            <p className="text-[1.125rem] md:text-lg xl:text-2xl">
               {slice.primary.content}
             </p>
             <Button variant="primary" link={slice.primary.btn_link}>

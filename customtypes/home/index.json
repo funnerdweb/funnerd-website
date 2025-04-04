@@ -11,6 +11,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "testimonials_block": {
+              "type": "SharedSlice"
+            },
             "home_founder_block": {
               "type": "SharedSlice"
             },

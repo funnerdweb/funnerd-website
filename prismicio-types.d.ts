@@ -82,6 +82,7 @@ export type AboutDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<AboutDocumentData>, "about", Lang>;
 
 type HomeDocumentDataSlicesSlice =
+  | TestimonialsBlockSlice
   | HomeFounderBlockSlice
   | FeaturesBlockSlice
   | ContactCardSlice
@@ -148,6 +149,7 @@ export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
 type ServicesDocumentDataSlicesSlice =
+  | FaqsSlice
   | ServicesHeroBlockSlice
   | ContactCardSlice
   | ServiceBlockSlice;
@@ -427,6 +429,83 @@ export type ContactCardSlice = prismic.SharedSlice<
   "contact_card",
   ContactCardSliceVariation
 >;
+
+/**
+ * Item in *Faqs → Default → Primary → faqs*
+ */
+export interface FaqsSliceDefaultPrimaryFaqsItem {
+  /**
+   * title field in *Faqs → Default → Primary → faqs*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faqs.default.primary.faqs[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * content field in *Faqs → Default → Primary → faqs*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faqs.default.primary.faqs[].content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Faqs → Default → Primary*
+ */
+export interface FaqsSliceDefaultPrimary {
+  /**
+   * title field in *Faqs → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faqs.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * faqs field in *Faqs → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faqs.default.primary.faqs[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  faqs: prismic.GroupField<Simplify<FaqsSliceDefaultPrimaryFaqsItem>>;
+}
+
+/**
+ * Default variation for Faqs Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FaqsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FaqsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Faqs*
+ */
+type FaqsSliceVariation = FaqsSliceDefault;
+
+/**
+ * Faqs Shared Slice
+ *
+ * - **API ID**: `faqs`
+ * - **Description**: Faqs
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FaqsSlice = prismic.SharedSlice<"faqs", FaqsSliceVariation>;
 
 /**
  * Item in *FeaturesBlock → Default → Primary → features*
@@ -1547,6 +1626,98 @@ export type ServicesHeroBlockSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *TestimonialsBlock → Default → Primary → testimonials*
+ */
+export interface TestimonialsBlockSliceDefaultPrimaryTestimonialsItem {
+  /**
+   * content field in *TestimonialsBlock → Default → Primary → testimonials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials_block.default.primary.testimonials[].content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+
+  /**
+   * name field in *TestimonialsBlock → Default → Primary → testimonials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials_block.default.primary.testimonials[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * location field in *TestimonialsBlock → Default → Primary → testimonials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials_block.default.primary.testimonials[].location
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  location: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *TestimonialsBlock → Default → Primary*
+ */
+export interface TestimonialsBlockSliceDefaultPrimary {
+  /**
+   * title field in *TestimonialsBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials_block.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * testimonials field in *TestimonialsBlock → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials_block.default.primary.testimonials[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  testimonials: prismic.GroupField<
+    Simplify<TestimonialsBlockSliceDefaultPrimaryTestimonialsItem>
+  >;
+}
+
+/**
+ * Default variation for TestimonialsBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TestimonialsBlockSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TestimonialsBlockSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TestimonialsBlock*
+ */
+type TestimonialsBlockSliceVariation = TestimonialsBlockSliceDefault;
+
+/**
+ * TestimonialsBlock Shared Slice
+ *
+ * - **API ID**: `testimonials_block`
+ * - **Description**: TestimonialsBlock
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TestimonialsBlockSlice = prismic.SharedSlice<
+  "testimonials_block",
+  TestimonialsBlockSliceVariation
+>;
+
+/**
  * Item in *ValuesBlock → Default → Primary → values*
  */
 export interface ValuesBlockSliceDefaultPrimaryValuesItem {
@@ -1695,6 +1866,11 @@ declare module "@prismicio/client" {
       ContactCardSliceDefaultPrimary,
       ContactCardSliceVariation,
       ContactCardSliceDefault,
+      FaqsSlice,
+      FaqsSliceDefaultPrimaryFaqsItem,
+      FaqsSliceDefaultPrimary,
+      FaqsSliceVariation,
+      FaqsSliceDefault,
       FeaturesBlockSlice,
       FeaturesBlockSliceDefaultPrimaryFeaturesItem,
       FeaturesBlockSliceDefaultPrimary,
@@ -1739,6 +1915,11 @@ declare module "@prismicio/client" {
       ServicesHeroBlockSliceDefaultPrimary,
       ServicesHeroBlockSliceVariation,
       ServicesHeroBlockSliceDefault,
+      TestimonialsBlockSlice,
+      TestimonialsBlockSliceDefaultPrimaryTestimonialsItem,
+      TestimonialsBlockSliceDefaultPrimary,
+      TestimonialsBlockSliceVariation,
+      TestimonialsBlockSliceDefault,
       ValuesBlockSlice,
       ValuesBlockSliceDefaultPrimaryValuesItem,
       ValuesBlockSliceDefaultPrimary,

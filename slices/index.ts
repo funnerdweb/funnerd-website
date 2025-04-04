@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 export const components = {
   about_funnerd_block: dynamic(() => import("./AboutFunnerdBlock")),
   contact_card: dynamic(() => import("./ContactCard")),
+  faqs: dynamic(() => import("./Faqs")),
   features_block: dynamic(() => import("./FeaturesBlock")),
   founder_section: dynamic(() => import("./FounderSection")),
   hero_block: dynamic(() => import("./HeroBlock")),
@@ -13,5 +14,6 @@ export const components = {
   home_founder_block: dynamic(() => import("./HomeFounderBlock")),
   service_block: dynamic(() => import("./ServiceBlock")),
   services_hero_block: dynamic(() => import("./ServicesHeroBlock")),
+  testimonials_block: dynamic(() => import("./TestimonialsBlock")),
   values_block: dynamic(() => import("./ValuesBlock")),
 };

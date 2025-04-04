@@ -21,7 +21,7 @@ const ServiceBlock: FC<ServiceBlockProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="py-32"
+      className="py-16"
     >
       <div className="container lg:max-w-5xl">
         <div className="text-center">

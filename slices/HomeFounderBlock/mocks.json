@@ -37,12 +37,11 @@
 				"type": "Text"
 			},
 			"btn_link": {
-				"key": "26ed1cad-e386-4634-a7c1-d3324d33bbae",
 				"__TYPE__": "LinkContent",
+				"key": "6a95f392-3baa-4aa1-8c71-5b79e18eb645",
 				"value": {
 					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io",
-					"text": "native"
+					"url": "https://prismic.io"
 				}
 			},
 			"btn_text": {

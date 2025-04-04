@@ -43,7 +43,7 @@ const FeaturesBlock: FC<FeaturesBlockProps> = ({ slice }) => {
               <h3 className="text-2xl font-black gradient mt-12">
                 {item.title}
               </h3>
-              <p className="text-xl -tracking-[0.2px]">{item.content}</p>
+              <p className="text-xl -tracking-[0.2px] mt-2">{item.content}</p>
             </div>
           ))}
         </div>

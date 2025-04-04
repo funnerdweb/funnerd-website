@@ -35,7 +35,7 @@ const HomeAboutSection: FC<HomeAboutSectionProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="py-16"
+      className="py-16 "
     >
       <div className="container overflow-hidden">
         <div className="max-w-[40rem]">
@@ -50,7 +50,7 @@ const HomeAboutSection: FC<HomeAboutSectionProps> = ({ slice }) => {
               {slice.primary.features.map((item, index) => (
                 <li key={index} className="flex items-center gap-4">
                   <CircleCheck className="size-6 bg-blue text-white rounded-full" />
-                  <span className="text-lg md:text-xl font-medium -tracking-[0.2px]">
+                  <span className="text-[1.125rem] md:text-lg lg:text-2xl -tracking-[0.2px]">
                     {item.text}
                   </span>
                 </li>
